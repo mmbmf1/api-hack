@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* height: 100%; */
+    /* overflow: hidden; */
+}
+
+body {
+}
+
+.container {
+    text-align: center;
+}
+
+#search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+button {
+    width: 50%;
+}
+
+form, input, label {
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#trail-results {
+    text-align: left;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.trail-thumb {
+    float: left;
+    width: 50px;
+    height: 40px;
+}
