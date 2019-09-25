@@ -22,7 +22,7 @@ function formatTrailParams(params) {
 
 //GET trail list from API
 function getTrails(position) {
-    const trailKey = '200336642-7ec33389ef4df8d74aa21116b59cd0dc';
+    const trailKey = '';
     const trailURL = 'https://www.hikingproject.com/data/get-trails';
 
     const params = {
