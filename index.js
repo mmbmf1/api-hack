@@ -124,7 +124,7 @@ function searchLocation (searchValue) {
     // console.log(searchValue);
 
     const geoKey = 'hfOaz02p26S6Ug5zqlaUhL0IxBII8f29';
-    const geoURL = 'http://www.mapquestapi.com/geocoding/v1/address';
+    const geoURL = 'https://www.mapquestapi.com/geocoding/v1/address';
 
     const geoParams = {
         key: geoKey,
