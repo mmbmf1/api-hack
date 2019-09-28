@@ -15,7 +15,7 @@ function displayTrails(responseJson) {
     $('#js-trail-results-list').empty();
     for (let i = 0; i < responseJson.trails.length; i++) {
         $('#js-trail-results-list').append(
-            `<li class="js-trail-list"><h3><img src="${responseJson.trails[i].imgSmall}" class="trail-thumb">${responseJson.trails[i].name}</h3><p>${responseJson.trails[i].summary}</p><ul><li>Length: ${responseJson.trails[i].length} mi</li><li>Difficulty: ${responseJson.trails[i].difficulty}</li><li>Trail Condition: ${responseJson.trails[i].conditionStatus}</li><li>${responseJson.trails[i].weather_descr}</li>`
+            `<li class="js-trail-list"><h3><img src="${responseJson.trails[i].imgSmall}" class="trail-thumb">${responseJson.trails[i].name}</h3><p>${responseJson.trails[i].summary}</p><ul><li>Length: ${responseJson.trails[i].length} mi</li><li>Difficulty: ${responseJson.trails[i].difficulty}</li><li>Trail Condition: ${responseJson.trails[i].conditionStatus}</li><li><img src="icons/${responseJson.trails[i].weather_icon_descr}.png" class="weather-icon"><span>Temp: ${responseJson.trails[i].weather_temp}</span></li>`
         )}
     $('#search').addClass('hidden');
     $('#trail-results').removeClass('hidden');
@@ -60,29 +60,32 @@ function getData(position) {
         throw new Error(response.message);
     })
     .then(function(responseJson) {
-        // console.log(responseJson);
+        console.log(responseJson);
 
         for (let i = 0; i < responseJson.trails.length; i++) {
             // console.log(responseJson.trails[i].latitude + ',' + responseJson.trails[i].longitude);
             
             // for each trail make a request to weather API
-            const weatherKey = '0cf333894a41030e497d8926e994b686';
-            const weatherID = '2d57026a'
-            const weatherURL = 'http://api.weatherunlocked.com/api/current/';
+            const weatherKey = 'dee4a3ec68e94a8f8ad37abac35869f2';
+            // const weatherID = '2d57026a'
+            const weatherURL = 'https://api.weatherbit.io/v2.0/current';
 
 
             const weatherParams = {
-                app_id: weatherID,
-                app_key: weatherKey
+                lat: responseJson.trails[i].latitude,
+                lon: responseJson.trails[i].longitude,
+                key: weatherKey
+                // app_id: weatherID,
+                // app_key: weatherKey
                 // query: responseJson.trails[i].latitude + ',' + responseJson.trails[i].longitude,
                 // forcast_days: 7,
                 // units: 'f'
             };
 
-            const weatherCoords = responseJson.trails[i].latitude + ',' + responseJson.trails[i].longitude;
+            // const weatherCoords = responseJson.trails[i].latitude + ',' + responseJson.trails[i].longitude;
 
             const weatherString = formatWeatherParams(weatherParams);
-            const wURL = weatherURL + weatherCoords + '?' + weatherString;
+            const wURL = weatherURL + '?' + weatherString;
 
             // console.log(wURL);
             
@@ -90,8 +93,9 @@ function getData(position) {
             fetch(wURL)
             .then(response => response.json())
             .then(function returnWeather(weatherResponse) {
-                // console.log(weatherResponse.current.weather_descriptions + ',' + weatherResponse.current.temperature);
-                responseJson.trails[i].weather_descr = weatherResponse.wx_desc + ',' + weatherResponse.temp_f;
+                // console.log(weatherResponse.data[0].temp);
+                responseJson.trails[i].weather_icon_descr = weatherResponse.data[0].weather.icon 
+                responseJson.trails[i].weather_temp = weatherResponse.data[0].temp;
                 if (i == responseJson.trails.length - 1) {
                     displayTrails(responseJson);
             }})
