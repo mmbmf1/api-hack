@@ -9,17 +9,18 @@
             <section id="search">
                     <h1>Find Trails Near You</h1>
                     <button type="submit" id="loc-trail-search">Go!</button>
-                    <form class="js-form">
+                    <form action="#" class="js-form">
                         <label for="trail-search">OR<br>Enter a Search Location</label>
                         <br><input type="text" name="trail-search" id="js-trail-search" placeholder="e.g. city/state/zip">
-                        <input type="submit" value="search">
+                        <input type="submit" value="search" id="location-search">
                     </form>
             </section>
             <p id="js-error-message" class="error-message"></p>
             <section id="trail-results" class="hidden">
                 <h2>Trail Search Results</h2>
                 <ul id="js-trail-results-list"></ul>
-                <ul id="js-weather-results"></ul>
+                <button type="submit" id="home-button">Return to Search</button>
+                <!-- <ul id="js-weather-results"></ul> -->
             </section>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>        
