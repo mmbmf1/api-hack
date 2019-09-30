@@ -45,7 +45,7 @@ function getData(position) {
         lat: position.coords.latitude,
         lon: position.coords.longitude,
         maxDistance: 50,
-        maxResults: 25,
+        maxResults: 1,
         key: trailKey
     };
     const queryString = formatParams(params);
