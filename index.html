@@ -4,23 +4,26 @@
     <meta name="viewport" content="width=device-width">
     <title>Hiking Trail Buddy</title>
     <link rel="stylesheet" href="main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
     <body>
+        <div id="background-img"></div>
         <div class="container">
             <section id="search">
                     <h1>Find Trails Near You</h1>
-                    <button type="submit" id="loc-trail-search">Go!</button>
-                    <form action="#" class="js-form">
-                        <label for="trail-search">OR<br>Enter a Search Location</label>
-                        <br><input type="text" name="trail-search" id="js-trail-search" placeholder="e.g. city/state/zip">
-                        <input type="submit" value="search" id="location-search">
-                    </form>
+                        <div class="input-border"></div>
+                        <div class="input-holder">
+                            <form action="#" class="js-form">
+                                <input type="text" name="trail-search" id="js-trail-search" placeholder="Enter a city, state or zip">
+                                <input type="submit" value="search" id="location-search">
+                            </form>
+                        </div>
+                        <button type="submit" id="loc-trail-search">search current location</button>
             </section>
             <p id="js-error-message" class="error-message"></p>
             <section id="trail-results" class="hidden">
                 <h2>Trail Search Results</h2>
                 <ul id="js-trail-results-list"></ul>
                 <button type="submit" id="home-button">Return to Search</button>
-                <!-- <ul id="js-weather-results"></ul> -->
             </section>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>        

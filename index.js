@@ -17,6 +17,7 @@ function displayTrails(responseJson) {
         $('#js-trail-results-list').append(
             `<li class="js-trail-list"><h3><img src="${responseJson.trails[i].imgSmall}" class="trail-thumb">${responseJson.trails[i].name}</h3><p>${responseJson.trails[i].summary}</p><ul><li>Length: ${responseJson.trails[i].length} mi</li><li>Difficulty: ${responseJson.trails[i].difficulty}</li><li>Trail Condition: ${responseJson.trails[i].conditionStatus}</li><li><img src="icons/${responseJson.trails[i].weather_icon_descr}.png" class="weather-icon"><span>Temp: ${responseJson.trails[i].weather_temp}</span></li>`
         )}
+    $('#background-img').addClass('hidden');
     $('#search').addClass('hidden');
     $('#trail-results').removeClass('hidden');
 }
@@ -50,7 +51,7 @@ function getData(position) {
     };
     const queryString = formatParams(params);
     const tURL = trailURL + '?' + queryString;
-    // console.log(tURL);
+    console.log(tURL);
 
     fetch(tURL)
     .then(function(response) {
@@ -87,7 +88,7 @@ function getData(position) {
             const weatherString = formatWeatherParams(weatherParams);
             const wURL = weatherURL + '?' + weatherString;
 
-            // console.log(wURL);
+            console.log(wURL);
             
             //for each trail display the description and temperature
             fetch(wURL)
@@ -139,7 +140,7 @@ function searchLocation (searchValue) {
     const geoString = formatParams(geoParams);
     const gURL = geoURL + '?' + geoString;
     
-    // console.log(gURL);
+    console.log(gURL);
 
     fetch(gURL)
     .then(response => response.json())
