@@ -4,6 +4,7 @@ function returnToSearch () {
     $('#home-button').on('click', function () {
         // console.log('return home');
         $('#trail-results').addClass('hidden');
+        $('#background-img').removeClass('hidden');
         $('#search').removeClass('hidden');
     });
 } 
