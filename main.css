@@ -72,13 +72,14 @@ h1 {
     font-family: 'Lato', sans-serif;
     font-size: 12pt;
     color: white;
-    background-color: green;
+    background-color: #46cc23;
     border: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
 #loc-trail-search {
+    display: none;
     width: auto;
     margin-top: 40px;
     padding: 10px;
@@ -86,10 +87,11 @@ h1 {
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     color: white;
-    background-color: green;
+    background-color: #46cc23;
     border: none;
     border-radius: 5px;
 }
+
 
 .hidden {
     display: none;
@@ -105,6 +107,14 @@ ul {
     padding-left: 0;
 }
 
+h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#js-trail-results-list {
+    font-family: 'Lato', sans-serif;
+}
+
 .trail-thumb {
     float: left;
     width: 50px;
@@ -117,6 +127,32 @@ ul {
     vertical-align: middle;
 }
 
-span {
+.weather-section {
+    display: flex;
+    justify-content: center;
+}
+
+.weather-card {
+    width: 33.33%;
+    margin: 10px;
+    text-align: center;
+}
+
+h4 {
+    margin: 0;
+}
+#home-button {
+    display: block;
+    width: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px;
+    height: 45px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    color: white;
+    background-color: #46cc23;
+    border: none;
+    border-radius: 5px;
 }
