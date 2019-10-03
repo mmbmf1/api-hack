@@ -77,7 +77,7 @@ h1 {
     border-bottom-right-radius: 5px;
 }
 
-#loc-trail-search {
+/* #loc-trail-search {
     display: none;
     width: auto;
     margin-top: 40px;
@@ -89,7 +89,7 @@ h1 {
     background-color: #46cc23;
     border: none;
     border-radius: 5px;
-}
+} */
 
 
 .hidden {
@@ -152,7 +152,7 @@ div > ul {
     font-size: 2vw;
 }
 
-#icon-margin {
+.icon-margin {
     margin-right: 10px;
 }
 
