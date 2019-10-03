@@ -5,13 +5,12 @@
 html, body {
     height: 100%;
     margin: 0;
-    /* overflow: hidden; */
 }
 
 #background-img {
     height: 100%;
     margin: 0;
-    background-image: url("http://www.letshikemissouri.com/wp-content/uploads/2019/06/qtq80-7oe7yB-1024x682.jpeg");
+    background-image: url("https://github.com/mmbmf1/api-hack/blob/master/images/qtq80-7oe7yB-1024x682.jpeg?raw=true");
     background-size: cover;
     background-position: top, center;
     opacity: 0.8;
@@ -211,11 +210,11 @@ h4 {
     }
 
     div > ul {
-        font-size: 1.5vw;
+        font-size: 1.0vw;
     }
 
     div.trail-section > p {
-        font-size: 1.5vw;
+        font-size: 1.0vw;
     }
 
     .weather-card {
