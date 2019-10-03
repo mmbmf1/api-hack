@@ -16,7 +16,9 @@ function displayTrails(responseJson) {
         $('#js-trail-results-list').append(
             `<li class="js-trail-list"><div class="trail-section"><img src="${responseJson.trails[i].imgSmall}" class="trail-thumb"><h3>${responseJson.trails[i].name}</h3><ul><li id="icon-margin"><i class="fas fa-compass"></i>${responseJson.trails[i].length} mi</li><li><i class="fas fa-info"></i>${responseJson.trails[i].conditionStatus}</li></ul><p>${responseJson.trails[i].summary}</p></div><div class="weather-section"><div class="weather-card"><h4>${responseJson.trails[i].weather_date_1}</h4><img src="icons/${responseJson.trails[i].weather_icon_descr_1}.png" class="weather-icon" alt="weather icon"><div class="weather-container"><h4>${responseJson.trails[i].weather_temp_1}&#8457</h4></div></div><div class="weather-card"><h4>${responseJson.trails[i].weather_date_2}</h4><img src="icons/${responseJson.trails[i].weather_icon_descr_2}.png" class="weather-icon" alt="weather icon"><div class="weather-container"><h4>${responseJson.trails[i].weather_temp_2}&#8457</h4></div></div><div class="weather-card"><h4>${responseJson.trails[i].weather_date_3}</h4><img src="icons/${responseJson.trails[i].weather_icon_descr_3}.png" class="weather-icon" alt="weather icon"><div class="weather-container"><h4>${responseJson.trails[i].weather_temp_3}&#8457</h4></div></div></div>`
         )}
-    $('.trail-thumb').on('error').attr('src', 'https://cdn-files.apstatic.com/hike/7052502_small_1555695540.jpg');
+    $('.trail-thumb').on('error', function() {
+        $(this).attr('src', 'https://cdn-files.apstatic.com/hike/7052502_small_1555695540.jpg');
+    });
     $('#background-img').addClass('hidden');
     $('#search').addClass('hidden');
     $('#trail-results').removeClass('hidden');
