@@ -1,35 +1,35 @@
 <!-- The name of your app at the top of the file -->
-#Trail Buddy Hiking Ap#
+# Trail Buddy Hiking App #
 
 <!-- A link to your live app -->
-##Live Page:##
+## Live Page: ##
 https://mmbmf1.github.io/api-hack/
 
 
 <!-- Screenshot(s) of your app. This makes your app description much easier to understand. -->
 
-##Landing Page:##
+## Landing Page: ##
 
 ![](images/landing_page.jpg)
 
-##Results Page:##
+## Results Page: ##
 
 ![](images/results_page.jpg)
 
 
 <!-- A summary section. This should have a concise explanation of what your app does. Try to frame this from the standpoint of what the user does, or what the app enables for the user. -->
 
-##Summary:##
+## Summary: ##
 
 A user can input a location (city, state or zip code), and a list of 15 neaby trails will display with some brief info. A link to additional trail info and the 3 day forecast for the trail is also displayed.
 
 
 <!-- A section on the technology used. For your capstone, this is fairly simple (HTML/CSS/JavaScript/jQuery) but it's still good to list out the key technologies -->
 
-##Technologies Used:##
+## Technologies Used: ##
 
-*HTML
-CSS8
-*JavaScript
-*jQuery
+* HTML
+* CSS
+* JavaScript
+* jQuery
 
