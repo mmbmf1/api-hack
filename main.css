@@ -77,21 +77,6 @@ h1 {
     border-bottom-right-radius: 5px;
 }
 
-/* #loc-trail-search {
-    display: none;
-    width: auto;
-    margin-top: 40px;
-    padding: 10px;
-    height: 45px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 900;
-    color: white;
-    background-color: #46cc23;
-    border: none;
-    border-radius: 5px;
-} */
-
-
 .hidden {
     display: none;
 }

@@ -67,7 +67,6 @@ function getData(position) {
 
         for (let i = 0; i < responseJson.trails.length; i++) {
             
-            // for each trail make a request to weather API
             const weatherKey = 'dee4a3ec68e94a8f8ad37abac35869f2';
             const weatherURL = 'https://api.weatherbit.io/v2.0/forecast/daily';
 
@@ -84,7 +83,6 @@ function getData(position) {
 
             // console.log(wURL);
             
-            //for each trail display the description and temperature
             fetch(wURL)
             .then(response => response.json())
             .then(function returnWeather(weatherResponse) {
@@ -115,13 +113,6 @@ function requestLocation() {
       alert("Geolocation is not supported by this browser.");
     }
   }
-
-//listen for submit
-function watchSubmit() {
-    $('#loc-trail-search').click(event => {
-        requestLocation();
-    });
-}
 
 //geocode location input by user
 function searchLocation (searchValue) {
@@ -160,7 +151,6 @@ function watchSearch() {
 }
 
 function startSearch () {
-    watchSubmit();
     watchSearch();
     returnToSearch();
 };
