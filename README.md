@@ -16,9 +16,17 @@ Results Page:
 ![](images/results_page.jpg)
 
 
-
-
 <!-- A summary section. This should have a concise explanation of what your app does. Try to frame this from the standpoint of what the user does, or what the app enables for the user. -->
+
+A user can input a location (city, state or zip code), and a list of 15 neaby trails will display with some brief info. A link to additional trail info and the 3 day forecast for the trail is also displayed.
 
 
 <!-- A section on the technology used. For your capstone, this is fairly simple (HTML/CSS/JavaScript/jQuery) but it's still good to list out the key technologies -->
+
+Technologies Used:
+
+	HTML
+	CSS
+	JavaScript
+	jQuery
+
