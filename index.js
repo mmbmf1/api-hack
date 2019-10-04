@@ -40,7 +40,6 @@ function formatParams(params) {
 
 //GET requests to trail API and weather API:
 function getData(position) {
-    console.log(position);
     const trailKey = '200336642-7ec33389ef4df8d74aa21116b59cd0dc';
     const trailURL = 'https://www.hikingproject.com/data/get-trails';
 
@@ -53,7 +52,6 @@ function getData(position) {
     };
     const queryString = formatParams(params);
     const tURL = trailURL + '?' + queryString;
-    // console.log(tURL);
 
     fetch(tURL)
     .then(function(response) {
@@ -63,7 +61,6 @@ function getData(position) {
         throw new Error(response.message);
     })
     .then(function(responseJson) {
-        console.log(responseJson);
 
         for (let i = 0; i < responseJson.trails.length; i++) {
             
@@ -81,8 +78,6 @@ function getData(position) {
             const weatherString = formatWeatherParams(weatherParams);
             const wURL = weatherURL + '?' + weatherString;
 
-            // console.log(wURL);
-            
             fetch(wURL)
             .then(response => response.json())
             .then(function returnWeather(weatherResponse) {
@@ -127,12 +122,10 @@ function searchLocation (searchValue) {
     const geoString = formatParams(geoParams);
     const gURL = geoURL + '?' + geoString;
     
-    // console.log(gURL);
 
     fetch(gURL)
     .then(response => response.json())
     .then(function returnCoords(locationCoords) {
-        console.log(locationCoords);
         const position = {coords: {
             latitude: locationCoords.results[0].locations[0].displayLatLng.lat,
             longitude: locationCoords.results[0].locations[0].displayLatLng.lng
