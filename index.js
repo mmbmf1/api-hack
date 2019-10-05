@@ -97,6 +97,7 @@ function getData(position) {
     })
     .catch(error => {
         $('#js-error-message').text(`Something went wrong: ${error.message}`)
+        $('#js-error-message').removeClass('hidden');
     });
 }
 
