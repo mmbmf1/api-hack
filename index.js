@@ -69,7 +69,7 @@ function getData(position) {
     })
     .then(function (responseJson) {
       for (let i = 0; i < responseJson.trails.length; i++) {
-        const weatherKey = "78173f4c13db499c8b1809da53a09707";
+        const weatherKey = "e92d5a31fa874f17abcd73f5007f06c9";
         const weatherURL = "https://api.weatherbit.io/v2.0/forecast/daily";
 
         const weatherParams = {
